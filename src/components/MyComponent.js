@@ -7,10 +7,16 @@ import React from "react";
 class MyComponent extends React.Component{
   //tập hợp html xong render
   //JSX
+  state = {
+    name: 'Min',
+    address: 'dalala',
+    age:20
+  }
+
   render(){
     return (
-      <div> my first component
-        { Math.random()}
+      <div> 
+        my name is {this.state.name}
       </div>
     )
   }
