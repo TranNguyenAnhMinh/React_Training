@@ -3,6 +3,7 @@
 // function component
 import React from "react";
 import UserInfor from "./UserInfo";
+import DisplayInfo from "./DisplayInfo";
 //class component
 class MyComponent extends React.Component {
   //tập hợp html xong render
@@ -12,6 +13,8 @@ class MyComponent extends React.Component {
     return (
       <div>
        <UserInfor/>
+       <br/>
+       <DisplayInfo name="Min" age="22"/>
       </div>
     )
   }
