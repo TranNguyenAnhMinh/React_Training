@@ -10,9 +10,9 @@ class MyComponent extends React.Component {
   //JSX
   state ={
     listUser: [
-      {id:1,name:'Mewmew',age:'51'},
+      {id:1,name:'Mewmew',age:'16'},
       {id:2,name:'123',age:'23'},
-      {id:3,name:'min',age:'20'}
+      {id:3,name:'min',age:'60'}
     ]
   }
   render() {
