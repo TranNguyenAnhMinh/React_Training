@@ -8,13 +8,19 @@ import DisplayInfo from "./DisplayInfo";
 class MyComponent extends React.Component {
   //tập hợp html xong render
   //JSX
-  
+  state ={
+    listUser: [
+      {id:1,name:'Mewmew',age:'51'},
+      {id:2,name:'123',age:'23'},
+      {id:3,name:'min',age:'20'}
+    ]
+  }
   render() {
     return (
       <div>
        <UserInfor/>
        <br/>
-       <DisplayInfo name="Min" age="22"/>
+       <DisplayInfo listUser={this.state.listUser}/>
       </div>
     )
   }
