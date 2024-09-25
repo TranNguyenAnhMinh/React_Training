@@ -4,19 +4,27 @@
 import React from "react";
 
 //class component
-class MyComponent extends React.Component{
+class MyComponent extends React.Component {
   //tập hợp html xong render
   //JSX
   state = {
     name: 'Min',
     address: 'dalala',
-    age:20
+    age: 20
   }
-
-  render(){
+  handleClick(event) {
+     console.log(">> clickme");
+    
+  }
+  handleOnMouseOver(event){
+    console.log(event)
+  }
+  render() {
     return (
-      <div> 
+      <div>
         my name is {this.state.name}
+        <button onMouseOver={this.handleOnMouseOver}>click me</button>
+        <button onClick={this.handleClick}>click me</button>
       </div>
     )
   }
