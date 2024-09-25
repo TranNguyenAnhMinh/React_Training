@@ -14,20 +14,35 @@ class MyComponent extends React.Component {
   }
   handleClick= (event) => {
      console.log(">> clickme");
-     console.log("My name is", this.state.name)
+     // merge state
     this.setState({
-      name:'MewMew'
+      name:'MewMew',
+      age:Math.floor((Math.random()*100)+1)
     })
   }
-  handleOnMouseOver(event){
-    console.log(event.pageX)
-  }
+  // handleOnMouseOver(event){
+  //   console.log(event.pageX)
+  // }
+handleOnChangeInput = (event) =>{
+this.setState({
+  name: event.target.value
+})
+}
+handleOnSubmit =(event)=>{
+ event.preventDefault();
+ console.log(this.state)
+}
   render() {
     return (
       <div>
-        my name is {this.state.name}
-        <button onMouseOver={this.handleOnMouseOver}>hold me</button>
-        <button onClick={(event) => {this.handleClick(event)}}>click me</button>
+        my name is {this.state.name} and   my age is {this.state.age}
+      <form onSubmit={(event)=>{this.handleOnSubmit(event)}}>
+        <input 
+        type="text"
+        onChange={(event)=> this.handleOnChangeInput(event)}
+        /> 
+        <button>Submit</button>
+      </form>
       </div>
     )
   }
