@@ -1,5 +1,6 @@
 import React from "react";
 import './DisplayInfo.scss'
+import logo from './../logo.svg'
 class DisplayInfo extends React.Component {
   state = {
     isShowListUser: true
@@ -16,6 +17,7 @@ class DisplayInfo extends React.Component {
 
       //props là obj=> properties tài sản
       <div className="display-infor-container">
+        <img src={logo} />
         <div>
           <span onClick={() => { this.handleShowHide() }}>Hide ls user</span>
         </div>
